@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Salon de Coiffure</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <!-- Promo Nav -->
+    <div class="promo-nav" id="promoNav">
+        10% de réduction sur votre première commande avec le code MGFK10
+    </div>
+    <!-- Top Navigation Bar -->
+    <div class="top-nav">
+        <!-- Icons à l'extrême droite -->
+        <div class="icons-left">
+            <a href="inscription.html"><img src="utilisateur.png" alt="Inscription"></a>
+            <a href="panier.html"><img src="panier.png" alt="Panier"></a>
+        </div>
+         
+    <!-- Navigation Links -->
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="PRODUITS.html">PRODUITS</a>
+        <a href="SERVICES.html">SERVICES</a>
+        <a href="BLOG.html">BLOG</a>
+        <a href="À PROPOS.html">À PROPOS</a>
+        <a href="CONTACT.html">CONTACT</a>
+    </div>
+        <!-- Section de l'objectif -->
+<section class="objectif-section">
+    <p>Notre objectif est de créer des produits naturels de haute qualité, à des prix abordables, respectueux de l'environnement, qui respectent notre engagement envers le bien-être animal et qui répondent parfaitement aux besoins de notre précieuse clientèle.</p>
+</section>
+    
+     
+
+    <!-- Reste du contenu... -->
+    <!-- ... -->
+
+    <script>
+        // Votre code JavaScript ici
+        document.addEventListener('DOMContentLoaded', function() {
+            const promoNav = document.getElementById('promoNav');
+            const messages = [
+                '10% de réduction sur votre première commande avec le code MGFK10',
+                'Livraison en 48h offerte à partir de 75€ d’achat'
+            ];
+            let messageIndex = 0;
+
+            setInterval(function() {
+                messageIndex = (messageIndex + 1) % messages.length; // Incrémente messageIndex ou remet à 0 si c'est le dernier message
+                promoNav.textContent = messages[messageIndex]; // Met à jour le texte de la promo
+            }, 4000); // Change le texte toutes les 4 secondes
+        });
+    </script>
+</body>
+</html>
+

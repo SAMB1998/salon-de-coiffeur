@@ -1,0 +1,857 @@
+.nav-left {
+    font-family: 'Dancing Script', cursive; /* Utilisation de la police Dancing Script */
+    font-size: 24px; /* Taille de la police ajustée pour une visibilité accrue */
+    color: #fff; /* Choix de couleur, peut être ajusté */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+.nav-left, .nav-center, .nav-right {
+    display: flex;
+    align-items: center;
+}
+
+.nav-left {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav-center a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.nav-right a {
+    margin-left: 10px;
+}
+
+.nav-right img {
+    width: 24px; /* Taille des icônes de réseaux sociaux */
+}
+.nav-center a {
+    position: relative; /* Positionnement relatif pour le lien */
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 0; /* Ajout de padding pour le lien */
+}
+
+.nav-center a::before {
+    content: ''; /* Le pseudo-élément a besoin de 'content' même s'il est vide */
+    position: absolute; /* Positionnement absolu par rapport au lien */
+    left: 0;
+    right: 0;
+    top: 0; /* Positionnement au top du lien */
+    height: 2px; /* Hauteur de la ligne */
+    background-color: white; /* Couleur de la ligne */
+    transform: scaleX(0); /* Commence sans largeur visible */
+    transition: transform 0.3s ease-in-out; /* Animation pour l'apparition de la ligne */
+}
+
+.nav-center a:hover::before {
+    transform: scaleX(1); /* Agrandit la ligne à la largeur complète au survol */
+}
+.hero-image {
+    background-image: url('background.avif'); /* Mettez le lien correct de votre image ici */
+    height: 700px; /* Ajustez selon la taille désirée */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Assure que l'image couvre entièrement la div */
+    position: relative; /* Permet de positionner le texte relativement à cette div */
+}
+
+.hero-text {
+    position: absolute;
+    top: 30%; /* Centre le texte verticalement */
+    left: 50%; /* Centre le texte horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste précisément le centrage */
+    color: white; /* Couleur du texte */
+    font-size: 32px; /* Taille du texte */
+    text-align: center;
+    width: 100%; /* Assure que le texte s'étend sur toute la largeur */
+}
+.hero-button {
+    background-color: white; /* Couleur de fond du bouton */
+    color: #333; /* Couleur du texte */
+    border: none; /* Aucune bordure */
+    padding: 10px 20px; /* Padding pour augmenter la taille du bouton */
+    margin: 10px; /* Espace entre les boutons */
+    font-size: 16px; /* Taille de la police */
+    font-weight: bold; /* Gras pour rendre le texte plus visible */
+    cursor: pointer; /* Curseur en forme de pointeur pour indiquer qu'il s'agit d'un bouton */
+    border-radius: 5px; /* Bords arrondis pour un aspect plus doux */
+    transition: background-color 0.3s; /* Transition pour l'effet de survol */
+}
+
+.hero-button:hover {
+    background-color: #eee; /* Changement de couleur lors du survol pour un feedback visuel */
+}
+
+.button-container {
+    text-align: center; /* Centre les boutons horizontalement */
+}
+
+.hero-text {
+    position: absolute;
+    top: 30%; /* Centre le texte verticalement */
+    left: 50%; /* Centre le texte horizontalement */
+    transform: translate(-50%, -50%); /* Ajustement précis du centrage */
+    color: white; /* Couleur du texte */
+    font-size: 32px; /* Taille du texte */
+    text-align: center;
+    width: 100%; /* Assure que le texte s'étend sur toute la largeur */
+}
+.hero-image {
+    background-image: url('background.avif'); /* Remplacez par le chemin de votre image */
+    height: 700px; /* Ajustez selon la taille de votre image */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.hero-text {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 32px;
+    text-align: center;
+    width: 100%;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.hero-button {
+    background-color: white;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero-button:hover {
+    background-color: #eee;
+}
+
+.contact-details {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6); /* Fond semi-transparent noir pour améliorer la visibilité */
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px; /* Bords arrondis pour un look plus doux */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Ombre pour un effet de profondeur */
+}
+.info-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Barre semi-transparente */
+    color: white;
+    display: flex;
+    justify-content: space-around; /* Distribue équitablement l'espace horizontal */
+    padding: 10px 0;
+}
+
+.contact-info, .hours-info, .address-info {
+    text-align: center;
+}
+
+.contact-info p, .hours-info p, .address-info p {
+    margin: 5px 0; /* Espacement entre les paragraphes */
+}
+
+/* Vos styles existants pour hero-button */
+.contact-background {
+    background-image: url('contact-background1.jpg'); /* Assurez-vous que le chemin d'accès est correct */
+    height: 50vh; /* Utilisez 50% de la hauteur de la fenêtre de visualisation */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; /* Couvre toute la zone disponible */
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center; /* Centre verticalement */
+}
+
+.contact-content {
+    text-align: center; /* Centre le texte à l'intérieur de la div */
+    color: black; /* Choisir une couleur qui contraste bien avec l'image de fond */
+    padding: 50px 20px; /* Ajuster le padding pour correspondre à l'image */
+    background: rgba(255, 255, 255, 0.15); /* Fond semi-transparent */
+    backdrop-filter: blur(5px); /* Effet de flou sur l'arrière-plan */
+    border-radius: 15px; /* Optionnel : adoucit les coins de la div */
+    width: 30%; /* Ajuster la largeur pour correspondre à l'image */
+    max-width: 600px; /* Ajuster la largeur maximale pour les grands écrans */
+    margin: auto; /* Centre la div horizontalement */
+    position: absolute; /* Positionnement absolu */
+    top: 40%; /* Positionnement vertical pour être au centre */
+    left: 50%; /* Positionnement horizontal pour être au centre */
+    transform: translate(-50%, -50%); /* Ajustement précis pour le centrage */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Ombre douce pour un effet de profondeur */
+}
+
+
+/* Stylisation supplémentaire pour le titre et le paragraphe si nécessaire */
+h1 {
+    margin-bottom: 0.5em; /* Espace sous le titre */
+}
+
+p {
+    margin-bottom: 1em; /* Espace sous le paragraphe */
+    line-height: 1.6; /* Espace entre les lignes de texte pour améliorer la lisibilité */
+}
+.contact-title h2 {
+    text-align: center; /* Centre le titre horizontalement */
+    color: black; /* Définit la couleur du texte en noir */
+    font-size: 36px; /* Définit une grande taille de police */
+    margin-top: 20px; /* Ajoute de l'espace au-dessus du titre */
+    padding: 10px; /* Ajoute du padding pour un meilleur espacement */
+}
+.icons-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.icon-item {
+    text-align: center;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Ajout pour centrer le texte sous les icônes */
+}
+
+.icon-item img {
+    margin-bottom: 10px; /* Espace entre l'icône et le texte */
+    width: 50px; /* Ajustez la taille selon vos besoins */
+    height: auto; /* Pour garder le ratio */
+}
+
+.icon-item p {
+    margin: 5px 0; /* Espacement entre les lignes de texte */
+    color: #333; /* Couleur du texte */
+    font-size: 14px; /* Taille du texte */
+}
+
+/* Styles supplémentaires pour le titre principal */
+.contact-title h2 {
+    text-align: center;
+    color: black;
+    font-size: 36px;
+    margin-bottom: 20px; /* Espace après le titre */
+}
+.button-group {
+    text-align: center; /* Centre les boutons horizontalement */
+    margin-top: 30px; /* Espacement au-dessus des boutons */
+}
+
+.contact-button {
+    background-color: transparent; /* Fond transparent pour les boutons */
+    border: 2px solid black; /* Bordure solide */
+    padding: 10px 20px; /* Espacement interne pour les boutons */
+    font-size: 16px; /* Taille du texte dans les boutons */
+    margin: 10px; /* Espacement entre les boutons */
+    cursor: pointer; /* Change le curseur lors du survol des boutons */
+    transition: background-color 0.3s, color 0.3s; /* Transition douce pour l'effet de survol */
+}
+
+.contact-button:hover {
+    background-color: black; /* Changement de couleur de fond lors du survol */
+    color: white; /* Changement de couleur du texte lors du survol */
+    border: 2px solid transparent; /* Rend la bordure transparente lors du survol */
+}
+
+/* Vous pouvez ajouter des règles média pour ajuster les boutons sur les petits écrans */
+@media (max-width: 768px) {
+    .contact-button {
+        padding: 10px; /* Réduisez le padding pour les petits écrans */
+        font-size: 14px; /* Réduisez la taille du texte pour les petits écrans */
+    }
+}
+.form-section {
+    max-width: 800px; /* Ajustez la largeur maximale du formulaire */
+    margin: 40px auto; /* Espacement autour de la section et centrage */
+    padding: 20px;
+    text-align: center; /* Centre le texte du titre et du paragraphe */
+}
+
+#contact-form {
+    display: flex;
+    flex-direction: column; /* Empile les champs du formulaire verticalement */
+    gap: 15px; /* Espacement entre les champs */
+    margin-top: 20px; /* Espacement en haut du formulaire */
+}
+
+#contact-form input, #contact-form textarea {
+    padding: 10px; /* Padding à l'intérieur des champs */
+    border: 1px solid #ccc; /* Bordure des champs */
+    border-radius: 4px; /* Adoucit les coins des champs */
+}
+
+#contact-form textarea {
+    height: 150px; /* Hauteur du champ de message */
+    resize: vertical; /* Permet à l'utilisateur de changer la taille verticalement */
+}
+
+.checkbox-container {
+    display: flex;
+    align-items: center; /* Alignement du texte de la case à cocher */
+    justify-content: start; /* Aligner la case à cocher à gauche */
+    text-align: left;
+    margin-top: 10px; /* Espacement au-dessus de la case à cocher */
+}
+
+.checkbox-container input {
+    margin-right: 10px; /* Espacement entre la case à cocher et le texte */
+}
+
+.send-button {
+    background-color: black; /* Couleur de fond du bouton */
+    color: white; /* Couleur du texte du bouton */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px; /* Adoucit les coins du bouton */
+    cursor: pointer; /* Changement de curseur pour indiquer la fonctionnalité cliquable */
+    margin-top: 20px; /* Espacement au-dessus du bouton */
+}
+
+.send-button:hover {
+    background-color: #333; /* Changement de couleur au survol */
+}
+
+/* Vous pouvez ajouter des règles média pour ajuster le formulaire sur les petits écrans */
+@media (max-width: 768px) {
+    .form-section {
+        padding: 10px;
+    }
+    
+    #contact-form input, #contact-form textarea {
+        padding: 8px; /* Réduire le padding pour les petits écrans */
+    }
+    
+    .send-button {
+        padding: 8px 16px; /* Réduire le padding du bouton pour les petits écrans */
+    }
+}
+.footer {
+    background-color: #333; /* Couleur de fond du pied de page */
+    color: white; /* Couleur du texte dans le pied de page */
+    padding: 20px 0; /* Espacement à l'intérieur du pied de page */
+    display: flex;
+    justify-content: space-between; /* Espacer les éléments */
+    align-items: start; /* Aligner les éléments au début */
+    flex-wrap: wrap; /* Permettre le retour à la ligne pour les petits écrans */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; /* Prendre toute la largeur */
+}
+
+.footer-links ul {
+    list-style: none; /* Retirer les puces de la liste */
+    padding: 0; /* Retirer le padding par défaut */
+    margin: 0 20px; /* Espacement entre les colonnes de liens */
+}
+
+.footer-links a {
+    color: white; /* Couleur des liens */
+    text-decoration: none; /* Enlever le soulignement */
+    display: block; /* Les liens prennent toute la largeur */
+    margin-bottom: 8px; /* Espacement entre les liens */
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Ajouter un soulignement au survol */
+}
+
+.footer-social {
+    display: flex;
+    align-items: center;
+    margin: 0 20px; /* Espacement autour des icônes sociales */
+}
+
+.footer-social img {
+    width: 24px; /* Taille des icônes */
+    height: auto; /* Garder le ratio */
+    margin-right: 10px; /* Espacement entre les icônes */
+}
+
+.footer-contact {
+    margin: 20px; /* Espacement autour des informations de contact */
+    text-align: center; /* Centrer le texte */
+}
+
+/* Réponse pour les petits écrans */
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column; /* Organiser le contenu en colonne pour les petits écrans */
+        align-items: center; /* Centrer les éléments */
+    }
+
+    .footer-links, .footer-social, .footer-contact {
+        width: auto; /* Ajuster la largeur pour les petits écrans */
+        margin: 10px 0; /* Espacement vertical pour les éléments */
+    }
+}
+.blog-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:  0;
+    padding: 20px;
+    background:wheat; /* Remplacez cette couleur par celle de votre choix pour l'arrière-plan */
+  }
+  
+  .blog-image img {
+    max-width: 70%; /* Ajustez en fonction de la taille de votre image et de l'espace souhaité */
+    height: auto; /* Pour maintenir le ratio de l'image */
+  }
+  
+  .blog-content {
+    max-width: 50%; /* Ajustez cette largeur en fonction de vos besoins */
+    margin-left: 20px; /* Espace entre l'image et le texte */
+  }
+  
+  .blog-content h1 {
+    color: #333; /* Choisissez une couleur pour le titre */
+    font-size: 2em; /* Taille du titre */
+  }
+  
+  .blog-content p {
+    color: #666; /* Couleur du texte */
+    margin: 20px 0; /* Espace autour du paragraphe */
+  }
+  
+  .btn-primary {
+    background-color: #000; /* Couleur de fond du bouton */
+    color: #fff; /* Couleur du texte du bouton */
+    text-decoration: none; /* Pas de soulignement */
+    padding: 10px 20px; /* Padding à l'intérieur du bouton */
+    border-radius: 5px; /* Coins arrondis pour le bouton */
+    display: inline-block; /* Pour que le bouton ait une largeur en fonction de son contenu */
+  }
+  
+  .btn-primary:hover {
+    background-color: #444; /* Changement de couleur au survol */
+    /* Ajouter des transitions si nécessaire */
+  }
+  .latest-articles-header {
+    text-align: center; /* Centre le titre horizontalement */
+    margin-top: 50px; /* Espacement au-dessus du titre */
+    margin-bottom: 20px; /* Espacement en dessous du titre */
+  }
+  
+  .latest-articles-header h2 {
+    font-size: 2.5em; /* Taille du titre */
+    color: #333; /* Couleur du titre */
+    /* Ajoutez d'autres styles comme des polices ou des ombres si nécessaire */
+  }
+  .articles-container {
+    display: flex;
+    justify-content: space-around; /* Répartit l'espace uniformément */
+    align-items: flex-start; /* Alignement au début des cartes */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+    margin: 50px 0; /* Espacement vertical */
+  }
+  
+  .article-card {
+    width: 45%; /* Utilisez une largeur pour que deux cartes tiennent sur une ligne */
+    margin: 20px; /* Espacement autour de chaque carte */
+  }
+  
+  .article-card img {
+    width: 100%; /* Pour que l'image remplisse la largeur de la carte */
+    height: auto; /* Pour maintenir le ratio de l'image */
+    border-radius: 8px; /* Pour les coins arrondis */
+  }
+  
+  .article-content {
+    padding: 20px; /* Espacement interne autour du texte */
+  }
+  
+  .article-content h3 {
+    color: #333; /* Couleur des titres des articles */
+    margin: 10px 0; /* Espacement vertical pour les titres */
+  }
+  
+  .article-content p {
+    color: #666; /* Couleur des descriptions */
+    margin-bottom: 20px; /* Espacement en dessous des paragraphes */
+  }
+  
+  .read-more {
+    color: #000; /* Couleur du lien 'S'Y RENDRE' */
+    text-decoration: none; /* Enlève le soulignement */
+    font-weight: bold; /* Rend le texte en gras */
+  }
+  
+  .read-more:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
+  }
+  
+  @media (max-width: 768px) {
+    .article-card {
+      width: 100%; /* Sur les petits écrans, chaque carte prendra toute la largeur */
+    }
+  }
+  .shampoo-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff; /* Adaptez la couleur de fond au besoin */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+  
+  .shampoo-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .shampoo-details {
+    flex: 1;
+    padding-left: 20px;
+  }
+  
+  .shampoo-title {
+    color: #333; /* Adaptez la couleur de titre au besoin */
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .shampoo-description {
+    color: #666; /* Adaptez la couleur de texte au besoin */
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
+  .shampoo-button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 20px;
+    background-color: #e2a84b; /* Adaptez la couleur du bouton au besoin */
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
+  
+  .shampoo-button:hover {
+    background-color: #c98a34; /* Adaptez pour un effet au survol */
+  }
+/* Styles pour la section À propos */
+ /* Styles pour la section À propos */
+.about-section {
+    background-image: url('backapropos.jpg'); /* Remplacez avec le chemin correct vers votre image de fond */
+    background-size: cover;
+    background-position: center;
+    padding: 200px 0; /* Ajustez le padding selon vos besoins */
+    text-align: center;
+  }
+  
+  .about-title {
+    font-size: 3em; /* Ajustez la taille du texte selon vos besoins */
+    margin-bottom: 0.5em;
+    color: #000; /* Couleur du titre en noir */
+    /* Ajoutez des styles supplémentaires pour le titre si nécessaire */
+  }
+  
+  .about-content {
+    width: 90%; /* Ajustez la largeur selon vos besoins */
+    margin: auto;
+    /* Ajoutez des styles supplémentaires pour le contenu si nécessaire */
+  }
+  
+  .about-content p {
+    color:gray; /* Couleur du texte en blanc */
+    /* Ajoutez des styles supplémentaires pour le texte si nécessaire */
+  }
+  
+  /* Vous pourriez vouloir ajouter un effet de parallaxe ou d'autres effets CSS3 pour améliorer l'apparence. */
+  body, h2, h3, p {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .philosophy-section {
+    background-color: #fff; /* ou toute autre couleur de fond que vous avez */
+    text-align: center;
+    padding: 50px 0;
+  }
+  
+  .philosophy-title {
+    font-size: 48px; /* ou la taille que vous souhaitez */
+    color: #333; /* couleur du texte pour le titre */
+    margin-bottom: 50px; /* espace après le titre */
+  }
+  
+  .philosophy-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .philosophy-item {
+    width: 20%; /* ou la largeur que vous souhaitez */
+    padding: 0 15px; /* espacement à l'intérieur des éléments */
+  }
+  
+  .philosophy-icon {
+    height: auto;
+    margin-bottom: 10px; /* espace après l'icône */
+    width: 64px; /* ou toute autre taille que vous préférez */
+    height: auto; /* cela préservera le rapport hauteur/largeur de l'image */
+    margin-bottom: 24px; /* ajustez selon l'espace que vous voulez sous l'icône */
+  
+  }
+  
+  .philosophy-item h3 {
+    font-size: 24px; /* ou la taille que vous souhaitez */
+    color: #333; /* couleur du texte pour les sous-titres */
+    margin-bottom: 16px; /* espace après le sous-titre */
+  }
+  
+  .philosophy-item p {
+    font-size: 16px; /* ou la taille que vous souhaitez */
+    color: #777; /* couleur du texte pour les paragraphes */
+    line-height: 1.6; /* espacement entre les lignes de texte */
+  }
+  
+  .btn {
+    background-color: #e2a84b; /* couleur de fond pour les boutons */
+    border: none;
+    padding: 10px 20px;
+    margin-top: 20px;
+    color: #fff; /* couleur du texte pour les boutons */
+    cursor: pointer;
+    text-transform: uppercase; /* lettres majuscules pour les boutons */
+    font-weight: bold; /* texte en gras pour les boutons */
+    border-radius: 2px; /* coins arrondis pour les boutons */
+  }
+  
+  /* Réactivité pour les petits écrans, si nécessaire */
+  @media (max-width: 960px) {
+    .philosophy-content {
+      flex-direction: column;
+    }
+  
+    .philosophy-item {
+      width: 80%; /* adapté aux écrans plus petits */
+      margin-bottom: 40px; /* espace entre les éléments quand ils sont en colonne */
+    }
+  
+    .btn {
+      display: block; /* pour que les boutons soient en blocs sur leur propre ligne */
+      width: 200px; /* largeur fixe pour les boutons */
+      margin: 20px auto; /* centrer les boutons horizontalement */
+    }
+   }
+   .services-section {
+    background-image: url('service.webp'); /* Remplacez avec le chemin réel de votre image de fond */
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 200px 50px; /* Ajustez selon l'espace nécessaire */
+    color: #fff; /* Assurez-vous que la couleur du texte contraste avec l'image de fond */
+  }
+  
+  .services-title {
+    font-size: 2.5em; /* Ajustez la taille du titre selon vos besoins */
+    margin-bottom: 0.5em;
+    color:wheat; /* Couleur du titre */
+  }
+  
+  .services-description {
+    font-size: 1.2em; /* Ajustez la taille du paragraphe selon vos besoins */
+    margin-bottom: 1em;
+    color: white; /* Couleur du paragraphe */
+  }
+  .button-container {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    margin-bottom: 20px; /* Ajoutez un espace en dessous du bouton si nécessaire */
+  }
+  
+  .contact-title {
+    text-align: center; /* Cette propriété centre les éléments en ligne ou en ligne-bloc */
+  }
+  
+  .button-container {
+    display: inline-block;
+    margin-top: 30px; /* Ajustez la valeur pour augmenter l'espace au-dessus du bouton */
+    margin-bottom: 20px; /* Espace sous le bouton, si nécessaire */
+  }
+  .btn-rendez-vous {
+    background-color: #000; /* Couleur de fond noir */
+    color: #fff; /* Couleur de texte blanc */
+    padding: 30px 40px; /* Ajustez la taille du bouton */
+    border: none; /* Supprime la bordure */
+    cursor: pointer; /* Change le curseur en main quand vous survolez */
+    text-transform: uppercase; /* Met le texte en majuscules */
+    font-weight: bold; /* Rend le texte en gras */
+    border-radius: 5px; /* Adoucit les coins avec un bord arrondi */
+    display: inline-block; /* Cela va permettre au bouton d'être affecté par text-align de son parent */
+    /* Autres styles pour le bouton... */
+  }
+
+
+
+  .coiffure-services {
+    font-family: 'Open Sans', sans-serif; /* Exemple de police */
+    color: #333; /* Couleur du texte */
+    max-width: 1200px; /* Largeur maximale de la section */
+    margin: 0 auto; /* Centrer la section */
+    padding: 20px; /* Espacement intérieur */
+}
+
+.coiffure-services h2 {
+    color: #000; /* Couleur du titre */
+    border-bottom: 2px solid #000; /* Ligne sous le titre */
+    padding-bottom: 10px; /* Espacement sous le titre */
+}
+
+.coiffure-services p {
+    margin-bottom: 20px; /* Espacement sous les paragraphes */
+    line-height: 1.6; /* Hauteur de ligne pour la lisibilité */
+    color: #666; /* Couleur du texte des paragraphes */
+}
+
+.coiffure-services ul {
+    list-style-type: none; /* Pas de puces */
+    padding: 0; /* Pas d'espacement intérieur */
+}
+
+.coiffure-services li {
+    background: url('path-to-icon.png') no-repeat left center; /* Icône avant le texte */
+    padding-left: 40px; /* Espacement pour l'icône */
+    margin-bottom: 10px; /* Espacement entre les éléments de liste */
+}
+
+.coiffure-services strong {
+    color: #000; /* Couleur du texte en gras */
+    font-weight: bold; /* Texte en gras */
+}
+
+.coiffure-services .price {
+    float: right; /* Prix aligné à droite */
+    font-weight: bold; /* Texte en gras pour le prix */
+}
+
+/* N'oubliez pas de remplacer 'path-to-icon.png' par le chemin réel de votre icône */
+.coiffure-services {
+  position: relative; /* Ajouté pour la position relative */
+  /* Votre style CSS existant... */
+}
+
+#dynamicImage {
+  width: 100%; /* ou la largeur que vous souhaitez */
+  height: auto; /* pour maintenir l'aspect ratio */
+  opacity: 1; /* totalement visible */
+  transition: opacity 0.5s ease-in-out; /* effet de transition pour l'opacité */
+}
+
+/* Cette classe sera ajoutée via JavaScript quand l'image doit disparaître */
+.hidden-image {
+  opacity: 0; /* rend l'image invisible */
+}
+.esthetique-services {
+  text-align: center; /* Pour centrer le texte */
+  max-width: 800px; /* Limiter la largeur du contenu pour l'esthétique */
+  margin: 0 auto 20px; /* Centrer dans la page et ajouter de l'espace en dessous */
+  padding: 20px; /* Ajouter de l'espace à l'intérieur de la section */
+}
+
+.esthetique-services h2 {
+  margin-bottom: 10px; /* Espacer le titre du paragraphe */
+}
+
+.esthetique-services p {
+  line-height: 1.6; /* Hauteur de ligne pour la lisibilité */
+}
+.soins-services {
+  margin: 20px auto; /* Espacement autour de la section */
+  max-width: 800px; /* Largeur maximale pour le centrage */
+}
+
+.soins-services h2 {
+  text-align: center; /* Titre centré */
+  margin-top: 40px; /* Espacement en haut pour séparer les sections */
+}
+
+.soin-item {
+  margin-bottom: 30px; /* Espacement entre les services */
+}
+
+.soin-item h3 {
+  margin-bottom: 5px; /* Petit espacement sous le titre du service */
+}
+
+.soin-item p {
+  margin-bottom: 10px; /* Espacement entre les paragraphes */
+  text-align: center; /* Centrage du texte */
+}
+ 
+
+
+
+.coiffure-services h2, .esthetique-services h2, .soins-services h2 {
+  border-bottom: none; /* Aucune bordure en bas du titre */
+  /* ...autres styles... */
+}
+
+
+/* Section FAQ */
+.faq-section {
+  background-color:hsla(0, 0%, 100%, 0.363);
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.faq-section h2, .faq-section h3 {
+  color: #333; /* Couleur du texte pour les titres */
+  margin-bottom: 10px;
+}
+
+.faq-section p {
+  color: #666; /* Couleur du texte pour le paragraphe */
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+/* Styliser l'image ajoutée */
+img[src="msroka.png"] {
+  display: block;
+  margin: 20px auto; /* Centrer l'image */
+  max-width: 100%; /* Assurer que l'image ne dépasse pas sa conteneur */
+  height: auto; /* Garder l'aspect ratio de l'image */
+}
+
+
+
+ 
